@@ -23,6 +23,9 @@ class Battle(models.Model):
     game_duration = models.TimeField()
     match_date = models.DateTimeField(auto_now_add=True)
 
+    class Meta:
+        ordering = ('-match_date')
+
 
 class Vehicle(models.Model):
     name = models.SlugField(unique=True)
